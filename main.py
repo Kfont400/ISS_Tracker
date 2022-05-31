@@ -36,7 +36,7 @@ def iss_tracker():
     sunset = int(data["results"]["sunset"].split("T")[1].split(":")[0])
 
     time_now = datetime.now()
-    time_now_hour = (time_now.hour-5)%24
+    time_now_hour = time_now.hour
 
     if is_close(iss_position,MY_LAT,MY_LONG) and sunset <= time_now_hour <= sunrise:
         my_email = "kai2flie@gmail.com"
