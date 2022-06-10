@@ -40,7 +40,7 @@ def iss_tracker():
 
     if is_close(iss_position,MY_LAT,MY_LONG) and sunset <= time_now_hour <= sunrise:
         my_email = "kai2flie@gmail.com"
-        password = "KaiKai0520!"
+        password = "INSERTPASSWORDHERE"
         with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
             connection.starttls()
             connection.login(user=my_email, password=password)
